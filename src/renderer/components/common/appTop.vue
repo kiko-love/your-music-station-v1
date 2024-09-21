@@ -351,65 +351,6 @@ export default {
         if (updateInfo.authorConfig.rewardImage !== "") {
           this.$globalConfig.rewardImage = updateInfo.authorConfig.rewardImage;
         }
-        // setTimeout(() => {
-        //   if (!updateInfo.isOpen.open) {
-        //     this.$confirm({
-        //       title: "服务已暂停😥",
-        //       centered: true,
-        //       mask: false,
-        //       content: !updateInfo.isOpen.description
-        //         ? "因不可预测及不可抗力因素，已暂时停止本软件服务，造成的不便请您见谅"
-        //         : updateInfo.isOpen.description,
-        //       okText: "退出",
-        //       okType: "danger",
-        //       cancelText: "访问项目主页",
-        //       zIndex: 10000,
-        //       keyboard: false,
-        //       maskClosable: false,
-        //       onOk() {
-        //         ipcRenderer.invoke("window-close");
-        //       },
-        //       onCancel() {
-        //         shell.openExternal(
-        //           "https://gitee.com/kikolove/yourMusicstation"
-        //         );
-        //         throw new Error("对话框不关闭");
-        //         //nothing
-        //       },
-        //     });
-        //   } else if (config.appVersion < updateInfo.appVersion) {
-        //     this.$confirm({
-        //       title: `更新提示（当前版本：${config.appVersion}）`,
-        //       centered: true,
-        //       mask: false,
-        //       content: updateInfo.updateConfig.forceUpdate
-        //         ? `有重要升级，请您尽快更新到最新版本（${updateInfo.appVersion}）`
-        //         : `发现新版本（${updateInfo.appVersion}），是否更新？`,
-        //       okText: "是",
-        //       okType: "danger",
-        //       keyboard: false,
-        //       maskClosable: false,
-        //       cancelText: updateInfo.updateConfig.forceUpdate ? "退出" : "否",
-        //       zIndex: 10000,
-        //       onOk() {
-        //         if (updateInfo.updateConfig.forceUpdate) {
-        //           shell.openExternal(updateInfo.updateConfig.url);
-        //           setTimeout(() => {
-        //             ipcRenderer.invoke("window-close");
-        //           }, 500);
-        //         } else {
-        //           shell.openExternal(updateInfo.updateConfig.url);
-        //         }
-        //       },
-        //       onCancel() {
-        //         if (updateInfo.updateConfig.forceUpdate) {
-        //           ipcRenderer.invoke("window-close");
-        //         }
-        //         //nothing
-        //       },
-        //     });
-        //   }
-        // }, 300);
       } catch (error) {
         // console.log(error);
       }

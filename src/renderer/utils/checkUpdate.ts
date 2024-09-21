@@ -1,5 +1,5 @@
 
-const updateUrl = "https://gitee.com/kikolove/imge-load-resource/raw/master/yourMusicStation/Json/update.json"
+const updateUrl = ""
 
 const getUpdateInfo = async function () {
     try {

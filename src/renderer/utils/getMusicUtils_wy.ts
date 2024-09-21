@@ -5,7 +5,7 @@ import contronl from "@renderer/components/contronl.vue"
 import { setRecord } from '@renderer/utils/playSongRecord'
 import { message } from "ant-design-vue";
 import request from '@renderer/utils/request'
-const wyapi = 'http://82.157.249.254'
+const wyapi = ''
 /**
  * 
  * @param strIn
